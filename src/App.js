@@ -8,7 +8,7 @@ import {
 } from 'material-ui/Toolbar';
 
 import CsuSvgLogo from './CsuBranding';
-import AppGroup from './AppGroups';
+import AppGroup from './AppGroup';
 
 import config from './config.json';
 import appGroups from './app-groups.json';
@@ -49,11 +49,9 @@ class App extends Component {
           <ToolbarTitle text={config.appName} />
         </Toolbar>
         <div id="main-content">
-          <div style={{width:'80%',margin:'0 auto'}}>
-            {this.createRows(appGroups).map((row, i)=>{
-              return row;
-            })}
-          </div>
+          {this.createRows(appGroups).map((row, i)=>{
+            return row;
+          })}
         </div>
       </div>
     );

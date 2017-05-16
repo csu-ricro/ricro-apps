@@ -5,17 +5,17 @@
       "name": "RCR Training",
       "description": "RCR online training and certification",
       "icon": "fa fa-graduation-cap",
-      "link": "http://getbootstrap.com/"
+      "link": "/rcr-training/"
     }]
   },
   {
     "name": "External",
     "shortName": null,
     "apps": [{
-      "name": "Protcol Status Request",
+      "name": "OSP Wizard",
       "description": "Request the status of a research protocol",
       "icon": "fa fa-list",
-      "link": "http://www.material-ui.com"
+      "link": "/osp-wizard/"
     }]
   },
   {
@@ -23,9 +23,14 @@
     "shortName": null,
     "apps": [{
       "name": "App Settings",
-      "description": "Settings for all apps",
+      "description": "User accounts, permissions, general settings, etc.",
       "icon": "fa fa-sliders",
-      "link": "http://services.ricro.colostate.edu"
+      "link": "/module-manager/"
+    }, {
+      "name": "Email Signature Generator",
+      "description": "Create a customized email signature",
+      "icon": "fa fa-envelope",
+      "link": "/signature-generator/"
     }]
   }
 ]

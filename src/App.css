@@ -26,7 +26,7 @@
   flex-direction: column;
   margin-right: auto;
   margin-left: auto;
-  width: 100%;
+  width: 80%;
   position: relative;
   padding: 20px 2em;
 }
@@ -39,6 +39,16 @@
   height: 100%;
 }
 
+.display-none {
+  display: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "prox-regular", sans-serif;
+}
+
+@media(max-width:768px) {
+  #main-content {
+    width: 100%;
+  }
 }
