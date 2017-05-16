@@ -1,0 +1,31 @@
+[{
+    "name": "Responsible Conduct of Research",
+    "shortName": "RCR",
+    "apps": [{
+      "name": "RCR Training",
+      "description": "RCR online training and certification",
+      "icon": "fa fa-graduation-cap",
+      "link": "http://getbootstrap.com/"
+    }]
+  },
+  {
+    "name": "External",
+    "shortName": null,
+    "apps": [{
+      "name": "Protcol Status Request",
+      "description": "Request the status of a research protocol",
+      "icon": "fa fa-list",
+      "link": "http://www.material-ui.com"
+    }]
+  },
+  {
+    "name": "Internal",
+    "shortName": null,
+    "apps": [{
+      "name": "App Settings",
+      "description": "Settings for all apps",
+      "icon": "fa fa-sliders",
+      "link": "http://services.ricro.colostate.edu"
+    }]
+  }
+]
