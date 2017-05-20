@@ -1,13 +1,19 @@
 import React, {
   Component
 } from 'react';
+import $ from 'jquery';
 import AppBar from 'material-ui/AppBar';
 import {
   Toolbar,
-  ToolbarTitle
+  ToolbarTitle,
+  ToolbarGroup
 } from 'material-ui/Toolbar';
+import IconButton from 'material-ui/IconButton';
+import FontIcon from 'material-ui/FontIcon';
 
-import CsuSvgLogo from './CsuBranding';
+import CsuSvgLogo, {
+  CsuFooter
+} from './CsuBranding';
 import AppGroup from './AppGroup';
 
 import config from './config.json';
@@ -40,19 +46,40 @@ class App extends Component {
     }
     return ret;
   }
+  componentDidMount() {
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 1) {
+        $('#logobar').addClass('display-none');
+        $('#top-toolbar').addClass('sticky');
+      } else {
+        $('#logobar').removeClass('display-none');
+        $('#top-toolbar').removeClass('sticky');
+      }
+    });
+  }
   render() {
     return (
       <div>
         <AppBar
+          id='logobar'
           iconElementLeft={<CsuSvgLogo />} />
-        <Toolbar>
+        <Toolbar id='top-toolbar'>
           <ToolbarTitle text={config.appName} />
+          <ToolbarGroup>
+            <IconButton
+              href={config.unitContact}
+              tooltip='Contact Us'
+              tooltipPosition='bottom-left'>
+              <FontIcon className='material-icons'>email</FontIcon>
+            </IconButton>
+          </ToolbarGroup>
         </Toolbar>
         <div id="main-content">
           {this.createRows(appGroups).map((row, i)=>{
             return row;
           })}
         </div>
+        <CsuFooter/>
       </div>
     );
   }
