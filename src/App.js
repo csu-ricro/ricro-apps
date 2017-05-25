@@ -41,7 +41,7 @@ class App extends Component {
       <ToolbarTitle key={0} text={config.app.name} />,
       (<ToolbarGroup key={1}>
         <IconButton
-          href={config.unitContact}
+          href={config.unit.contactHref}
           tooltip='Contact Us'
           tooltipPosition='bottom-left'>
           <FontIcon className='material-icons'>email</FontIcon>
