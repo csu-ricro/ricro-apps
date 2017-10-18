@@ -4,7 +4,7 @@
     "apps": [{
       "name": "RCR Training",
       "description": "RCR online training and certification",
-      "icon": "fa fa-graduation-cap",
+      "icon": "school",
       "link": "/rcr-training/"
     }]
   },
@@ -14,7 +14,7 @@
     "apps": [{
       "name": "OSP Wizard",
       "description": "Request the status of a research protocol",
-      "icon": "fa fa-list",
+      "icon": "forum",
       "link": "/osp-wizard/"
     }]
   },
@@ -24,12 +24,12 @@
     "apps": [{
       "name": "App Settings",
       "description": "User accounts, permissions, general settings, etc.",
-      "icon": "fa fa-sliders",
+      "icon": "settings",
       "link": "/module-manager/"
     }, {
       "name": "Email Signature Generator",
       "description": "Create a customized email signature",
-      "icon": "fa fa-envelope",
+      "icon": "email",
       "link": "/signature-generator/"
     }]
   }

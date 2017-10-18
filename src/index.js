@@ -1,16 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
+import registerServiceWorker from './registerServiceWorker';
+import App from 'ricro-app-template';
 
 import config from './config.json';
+import Apps from './Apps';
+
+const headerConfig = {
+  noLogin: true,
+  noHome: true,
+};
 
 ReactDOM.render(
-  <MuiThemeProvider muiTheme={getMuiTheme(config.muiTheme)}>
-    <App />
-  </MuiThemeProvider>,
+  <App config={config} headerConfig={headerConfig} reduxMiddleware={window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()}>
+    <Apps/>
+  </App>,
   document.getElementById('root')
 );
+registerServiceWorker();
