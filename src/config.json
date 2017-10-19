@@ -1,6 +1,17 @@
 {
+  "api": {
+    "location": ""
+  },
   "app": {
-    "name": "Apps"
+    "name": "Apps",
+    "header": {
+      "login": false,
+      "moreMenu": [{
+        "name": "Contact Us",
+        "icon": "email",
+        "link": "https://vpr.colostate.edu/ricro/contact-us"
+      }]
+    }
   },
   "unit": {
     "name": "RICRO",
