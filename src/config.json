@@ -1,11 +1,13 @@
 {
   "api": {
-    "location": ""
+    "auth": "https://services.ricro.colostate.edu/auth/sso/",
+    "location": "https://services.ricro.colostate.edu/api"
   },
   "app": {
     "name": "Apps",
     "header": {
       "login": false,
+      "autoLogin": false,
       "moreMenu": [{
         "name": "Contact Us",
         "icon": "email",
