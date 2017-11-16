@@ -1,12 +1,12 @@
 {
   "name": "ricro-apps",
-  "version": "1.0.0",
+  "version": "2.2.0",
   "private": true,
   "dependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
     "react-scripts": "1.0.14",
-    "ricro-app-template": "^1.1.1"
+    "ricro-app-template": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

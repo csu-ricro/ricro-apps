@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 
 import AppGroup from './AppGroup';
-import appGroups from './app-groups.json';
+import appGroups from './assets/app-groups.json';
 
 class Apps extends Component {
   createRows(appGroups) {

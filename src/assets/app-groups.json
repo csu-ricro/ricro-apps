@@ -5,7 +5,23 @@
       "name": "RCR Training",
       "description": "RCR online training and certification",
       "icon": "school",
-      "link": "/rcr-training/"
+      "link": "/rcr/training/"
+    }, {
+      "name": "RCR Repository",
+      "description": "Resources related to various RCR topics",
+      "icon": "bookmark",
+      "link": "/rcr/repository/"
+    }]
+  },
+  {
+    "name": "Biosafety Office",
+    "shortName": "BSO",
+    "apps": [{
+      "name": "BSL3 Files",
+      "protected": true,
+      "description": "Files related to BSL3 facilities and trianing",
+      "icon": "insert_drive_file",
+      "link": "/bso/bsl3-files/"
     }]
   },
   {

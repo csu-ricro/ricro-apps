@@ -8,11 +8,13 @@ import List, {
   ListItem,
   ListItemText,
   ListItemSecondaryAction,
+  ListItemIcon,
 } from 'material-ui/List';
 import IconButton from 'material-ui/IconButton';
 import Divider from 'material-ui/Divider';
 import Avatar from 'material-ui/Avatar';
 import Typography from 'material-ui/Typography';
+import Tooltip from 'material-ui/Tooltip';
 
 const styles = theme => ({
   appLink: {
@@ -45,13 +47,22 @@ const AppGroup = (props) => {
               <a href={app.link} className={props.classes.appLink}>
                 <ListItem button>
                   <Avatar className={props.classes.avatar}>
-                    <Icon>{app.icon}</Icon>
+                    <Icon>{app.icon == null ? 'apps' : app.icon}</Icon>
                   </Avatar>
                   <ListItemText primary={app.name} secondary={app.description} />
+                  {app.protected ? (
+                    <Tooltip title='Requires login'>
+                      <ListItemIcon aria-label='Requires login'>
+                        <Icon>lock</Icon>
+                      </ListItemIcon>
+                    </Tooltip>
+                  ) : null}
                   <ListItemSecondaryAction>
-                    <IconButton>
-                      <Icon>keyboard_arrow_right</Icon>
-                    </IconButton>
+                    <Tooltip title='Open'>
+                      <IconButton aria-label='Open'>
+                        <Icon>keyboard_arrow_right</Icon>
+                      </IconButton>
+                    </Tooltip>
                   </ListItemSecondaryAction>
                 </ListItem>
               </a>

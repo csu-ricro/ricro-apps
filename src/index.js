@@ -6,6 +6,9 @@ import App from 'ricro-app-template';
 import config from './config.json';
 import Apps from './Apps';
 
+import packageJson from '../package.json';
+console.log('v' + packageJson.version);
+
 ReactDOM.render(
   <App config={config} reduxMiddleware={window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()}>
     <Apps/>
