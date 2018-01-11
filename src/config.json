@@ -5,15 +5,13 @@
   },
   "app": {
     "name": "Apps",
-    "header": {
-      "login": false,
-      "autoLogin": false,
-      "moreMenu": [{
-        "name": "Contact Us",
-        "icon": "email",
-        "link": "https://vpr.colostate.edu/ricro/contact-us"
-      }]
-    }
+    "hasLogin": true,
+    "hasAutoLogin": false,
+    "sideNav": [{
+      "name": "Contact Us",
+      "icon": "email",
+      "link": "https://vpr.colostate.edu/ricro/contact-us"
+    }]
   },
   "unit": {
     "name": "RICRO",
@@ -21,8 +19,6 @@
     "contactHref": "https://vpr.colostate.edu/ricro/contact-us"
   },
   "defaultState": {
-    "login": {
-      "user": {}
-    }
+    "login": {}
   }
 }

@@ -32,12 +32,12 @@ const AppGroup = (props) => {
     return null;
   }
   let groupHeader = (
-    <Typography type="display1">
+    <Typography type='title'>
       {props.appGroup.name}
     </Typography>
   );
   return (
-    <div className='col-md-4'>
+    <div>
       {groupHeader}
       <List>
         <Divider />
@@ -45,7 +45,10 @@ const AppGroup = (props) => {
           return(
             <div key={i}>
               <a href={app.link} className={props.classes.appLink}>
-                <ListItem button>
+                <ListItem
+                  divider={props.appGroup.apps.length-1 !== i}
+                  button
+                  >
                   <Avatar className={props.classes.avatar}>
                     <Icon>{app.icon == null ? 'apps' : app.icon}</Icon>
                   </Avatar>
@@ -66,7 +69,6 @@ const AppGroup = (props) => {
                   </ListItemSecondaryAction>
                 </ListItem>
               </a>
-              {props.appGroup.apps.length-1 !== i ? <Divider inset /> : null}
             </div>
           )
         })}

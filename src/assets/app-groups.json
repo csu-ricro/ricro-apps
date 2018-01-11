@@ -25,10 +25,10 @@
     }]
   },
   {
-    "name": "External",
+    "name": "Office of Sponsored Programs",
     "shortName": null,
     "apps": [{
-      "name": "OSP Wizard",
+      "name": "Protocol Status",
       "description": "Request the status of a research protocol",
       "icon": "forum",
       "link": "/osp-wizard/"
