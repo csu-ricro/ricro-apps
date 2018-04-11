@@ -13,10 +13,16 @@ import List, {
 import IconButton from 'material-ui/IconButton';
 import Divider from 'material-ui/Divider';
 import Avatar from 'material-ui/Avatar';
-import Typography from 'material-ui/Typography';
 import Tooltip from 'material-ui/Tooltip';
+import Card, {
+  CardHeader,
+  CardContent
+} from 'material-ui/Card';
 
 const styles = theme => ({
+  container: {
+    margin: theme.spacing.unit * 2 + 'px ' + theme.spacing.unit + 'px',
+  },
   appLink: {
     '&:hover': {
       textDecoration: 'none',
@@ -28,52 +34,51 @@ const styles = theme => ({
 });
 
 const AppGroup = (props) => {
-  if (props.appGroup == null) {
-    return null;
-  }
-  let groupHeader = (
-    <Typography type='title'>
-      {props.appGroup.name}
-    </Typography>
-  );
-  return (
-    <div>
-      {groupHeader}
-      <List>
-        <Divider />
-        {props.appGroup.apps.map((app, i) => {
-          return(
-            <div key={i}>
-              <a href={app.link} className={props.classes.appLink}>
-                <ListItem
-                  divider={props.appGroup.apps.length-1 !== i}
-                  button
-                  >
-                  <Avatar className={props.classes.avatar}>
-                    <Icon>{app.icon == null ? 'apps' : app.icon}</Icon>
-                  </Avatar>
-                  <ListItemText primary={app.name} secondary={app.description} />
-                  {app.protected ? (
-                    <Tooltip title='Requires login'>
-                      <ListItemIcon aria-label='Requires login'>
-                        <Icon>lock</Icon>
-                      </ListItemIcon>
-                    </Tooltip>
-                  ) : null}
-                  <ListItemSecondaryAction>
-                    <Tooltip title='Open'>
-                      <IconButton aria-label='Open'>
-                        <Icon>keyboard_arrow_right</Icon>
-                      </IconButton>
-                    </Tooltip>
-                  </ListItemSecondaryAction>
-                </ListItem>
-              </a>
-            </div>
-          )
-        })}
-      </List>
-    </div>
+  const {
+    appGroup,
+    classes,
+  } = props;
+
+  return appGroup == null ? null : (
+    <Card className={classes.container}>
+      <CardHeader title={appGroup.name} subheader={appGroup.shortName}/>
+      <Divider/>
+      <CardContent>
+        <List>
+          {appGroup.apps.map((app, i) => {
+            return(
+              <div key={i}>
+                <a href={app.link} className={classes.appLink}>
+                  <ListItem
+                    button
+                    >
+                    <Avatar className={classes.avatar}>
+                      <Icon>{app.icon == null ? 'apps' : app.icon}</Icon>
+                    </Avatar>
+                    <ListItemText primary={app.name} secondary={app.description} />
+                    {app.protected ? (
+                      <Tooltip title='Requires login'>
+                        <ListItemIcon aria-label='Requires login'>
+                          <Icon>lock</Icon>
+                        </ListItemIcon>
+                      </Tooltip>
+                    ) : null}
+                    <ListItemSecondaryAction>
+                      <Tooltip title='Open'>
+                        <IconButton aria-label='Open'>
+                          <Icon>keyboard_arrow_right</Icon>
+                        </IconButton>
+                      </Tooltip>
+                    </ListItemSecondaryAction>
+                  </ListItem>
+                  {appGroup.apps.length-1 !== i && (<Divider/>)}
+                </a>
+              </div>
+            )
+          })}
+        </List>
+      </CardContent>
+    </Card>
   );
 }
 

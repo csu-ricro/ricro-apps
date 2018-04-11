@@ -5,6 +5,8 @@ import {
   Route,
 } from 'react-router-dom';
 
+import "bootstrap/dist/css/bootstrap-grid.min.css";
+
 import App from 'ricro-app-template';
 
 import config from './config.json';

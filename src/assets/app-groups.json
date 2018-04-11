@@ -26,23 +26,19 @@
   },
   {
     "name": "Office of Sponsored Programs",
-    "shortName": null,
+    "shortName": "OSP",
     "apps": [{
       "name": "Protocol Status",
+      "protected": "true",
       "description": "Request the status of a research protocol",
       "icon": "forum",
-      "link": "/osp-wizard/"
+      "link": "/protocol-status/"
     }]
   },
   {
     "name": "Internal",
     "shortName": null,
     "apps": [{
-      "name": "App Settings",
-      "description": "User accounts, permissions, general settings, etc.",
-      "icon": "settings",
-      "link": "/module-manager/"
-    }, {
       "name": "Email Signature Generator",
       "description": "Create a customized email signature",
       "icon": "email",

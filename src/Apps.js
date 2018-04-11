@@ -2,7 +2,6 @@ import React, {
   Component
 } from 'react';
 import withStyles from 'material-ui/styles/withStyles';
-import Grid from 'material-ui/Grid';
 
 import AppGroup from './AppGroup';
 import appGroups from './assets/app-groups.json';
@@ -23,17 +22,17 @@ class Apps extends Component {
     while (i < appGroups.length) {
       ret.push(
         <div key={ret.length} className={classes.root}>
-          <Grid container spacing={24}>
-            <Grid item xs={12} sm={4}>
+          <div className='row'>
+            <div className='col-md-4'>
               <AppGroup key={i} appGroup={appGroups[i]} />
-            </Grid>
-            <Grid item xs={12} sm={4}>
+            </div>
+            <div className='col-md-4'>
               <AppGroup key={i+1} appGroup={appGroups[i+1]} />
-            </Grid>
-            <Grid item xs={12} sm={4}>
+            </div>
+            <div className='col-md-4'>
               <AppGroup key={i+2} appGroup={appGroups[i+2]} />
-            </Grid>
-          </Grid>
+            </div>
+          </div>
         </div>
       );
       i += 3;
