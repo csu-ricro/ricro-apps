@@ -1,4 +1,5 @@
 {
+  "appsRoot": "/apps/",
   "api": {
     "auth": "/auth/sso/",
     "location": "/api/v2"
