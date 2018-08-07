@@ -19,10 +19,8 @@ const styles = theme => ({
   container: {
     margin: `${theme.spacing.unit * 2}px ${theme.spacing.unit}px`,
   },
-  appLink: {
-    '&:hover': {
-      textDecoration: 'none',
-    },
+  cardContent: {
+    padding: 0,
   },
   avatar: {
     backgroundColor: theme.palette.csuBrand.primary.green,
@@ -36,34 +34,32 @@ const AppGroup = props => {
     <Card className={classes.container}>
       <CardHeader title={appGroup.name} subheader={appGroup.shortName} />
       <Divider />
-      <CardContent>
+      <CardContent className={classes.cardContent}>
         <List>
           {appGroup.apps.map((app, i) => {
             return (
               <div key={app.name}>
-                <a href={app.link} className={classes.appLink}>
-                  <ListItem button>
-                    <Avatar className={classes.avatar}>
-                      <Icon>{app.icon == null ? 'apps' : app.icon}</Icon>
-                    </Avatar>
-                    <ListItemText primary={app.name} secondary={app.description} />
-                    {app.protected ? (
-                      <Tooltip title="Requires login">
-                        <ListItemIcon aria-label="Requires login">
-                          <Icon>lock</Icon>
-                        </ListItemIcon>
-                      </Tooltip>
-                    ) : null}
-                    <ListItemSecondaryAction>
-                      <Tooltip title="Open">
-                        <IconButton aria-label="Open">
-                          <Icon>keyboard_arrow_right</Icon>
-                        </IconButton>
-                      </Tooltip>
-                    </ListItemSecondaryAction>
-                  </ListItem>
-                  {appGroup.apps.length - 1 !== i && <Divider />}
-                </a>
+                <ListItem component="a" href={app.link} button>
+                  {app.protected ? (
+                    <Tooltip title="Requires login" placement="bottom-start">
+                      <ListItemIcon aria-label="Requires login">
+                        <Icon>lock</Icon>
+                      </ListItemIcon>
+                    </Tooltip>
+                  ) : null}
+                  <Avatar className={classes.avatar}>
+                    <Icon>{app.icon == null ? 'apps' : app.icon}</Icon>
+                  </Avatar>
+                  <ListItemText primary={app.name} secondary={app.description} />
+                  <ListItemSecondaryAction>
+                    <Tooltip title="Open" placement="left">
+                      <IconButton aria-label="Open">
+                        <Icon>keyboard_arrow_right</Icon>
+                      </IconButton>
+                    </Tooltip>
+                  </ListItemSecondaryAction>
+                </ListItem>
+                {appGroup.apps.length - 1 !== i && <Divider />}
               </div>
             );
           })}

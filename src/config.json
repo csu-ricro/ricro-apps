@@ -1,20 +1,15 @@
 {
   "appsRoot": "/apps/",
   "api": {
-    "auth": "/auth/sso/",
-    "location": "/api/v2"
+    "auth": "https://services.ricro.colostate.edu/auth/sso/",
+    "location": "https://services.ricro.colostate.edu/api/v2"
   },
   "app": {
-    "basename": "",
+    "basename": "/apps",
     "name": "Apps",
     "hasLogin": true,
     "hasAutoLogin": false,
-    "sideNav": [{
-      "name": "Contact Us",
-      "icon": "email",
-      "link": "https://vpr.colostate.edu/ricro/contact-us"
-    }],
-    "userDefaultProfileImg": "/_static/img/default-profile.png"
+    "userDefaultProfileImg": "https://services.ricro.colostate.edu/_static/img/default-profile.png"
   },
   "unit": {
     "name": "RICRO",
