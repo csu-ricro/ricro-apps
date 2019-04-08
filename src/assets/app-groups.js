@@ -1,7 +1,9 @@
-import IconBookmark from 'mdi-material-ui/Bookmark';
-import IconBookOpenPageVariant from 'mdi-material-ui/BookOpenPageVariant';
-import IconFileDownload from 'mdi-material-ui/FileDownload';
+import IconAtom from 'mdi-material-ui/Atom';
+import IconBook from 'mdi-material-ui/Book';
+import IconFolderOpen from 'mdi-material-ui/FolderOpen';
 import IconForum from 'mdi-material-ui/Forum';
+import IconSchool from 'mdi-material-ui/School';
+import IconSignatureFreehand from 'mdi-material-ui/SignatureFreehand';
 import React from 'react';
 
 export default [
@@ -12,15 +14,14 @@ export default [
       {
         name: 'RCR Training',
         description: 'RCR online training and certification',
-        icon: <IconBookOpenPageVariant />,
-        protected: true,
-        link: '/rcr/training/',
+        icon: <IconSchool />,
+        link: '/apps/rcr/training/',
       },
       {
         name: 'RCR Repository',
         description: 'Resources related to various RCR topics',
-        icon: <IconBookmark />,
-        link: '/rcr/repository/',
+        icon: <IconBook />,
+        link: '/apps/rcr/repository/',
       },
     ],
   },
@@ -29,11 +30,11 @@ export default [
     shortName: 'BSO',
     apps: [
       {
-        name: 'BSL3 Files',
+        name: 'BSL3 File Repository',
         protected: true,
         description: 'Files related to BSL3 facilities and trianing',
-        icon: <IconFileDownload />,
-        link: '/bso/bsl3-files/',
+        icon: <IconFolderOpen />,
+        link: '/apps/bso/bsl3-file-repo/',
       },
     ],
   },
@@ -46,7 +47,7 @@ export default [
         protected: 'true',
         description: 'Request the status of a research protocol',
         icon: <IconForum />,
-        link: '/protocol-status/',
+        link: '/apps/protocol-status/',
       },
     ],
   },
@@ -55,11 +56,18 @@ export default [
     shortName: null,
     apps: [
       {
+        name: 'Nucleus',
+        description: "Manage users and applications' configurations",
+        protected: true,
+        icon: <IconAtom />,
+        link: '/apps/nucleus/',
+      },
+      {
         name: 'Email Signature Generator',
         description: 'Create a customized email signature',
         protected: true,
-        icon: 'email',
-        link: '/signature-generator/',
+        icon: <IconSignatureFreehand />,
+        link: '/apps/signature-generator/',
       },
     ],
   },

@@ -1,6 +1,8 @@
+import pk from '../../package.json';
+
 export default {
   app: {
-    basename: '/apps',
+    basename: pk.homepage,
     name: 'Apps',
     hasLogin: false,
     nav: false,

@@ -1,5 +1,13 @@
 {
   "name": "ricro-apps",
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/src/serviceWorker.js",
+      "!<rootDir>/src/index.js"
+    ]
+  },
   "version": "5.0.0",
   "dependencies": {
     "colostate-ricro-ui": "^3.4.1",
@@ -10,8 +18,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --coverage",
+    "test:watch": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint \"src/**/*.js\"",
+    "lint:fix": "eslint \"src/**/*.js\" --fix"
   },
   "eslintConfig": {
     "extends": "react-app"

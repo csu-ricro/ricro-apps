@@ -1,8 +1,8 @@
 import AppFrame, { createConfig } from 'colostate-ricro-ui';
 import React from 'react';
 import { Route } from 'react-router-dom';
-import config from './assets/config';
-import Apps from './components/Apps';
+import config from './src/assets/config';
+import Apps from './src/components/Apps';
 
 const App = () => {
   const routes = [{ path: '/', component: Apps }];

@@ -64,8 +64,8 @@ const AppGroup = props => {
                   )}
                   <ListItemText primary={app.name} secondary={app.description} />
                   <ListItemSecondaryAction>
-                    <Tooltip title="Open">
-                      <IconButton aria-label="Open">
+                    <Tooltip title="Open" placement="left">
+                      <IconButton aria-label="Open" component="a" href={app.link}>
                         <IconChevronRight />
                       </IconButton>
                     </Tooltip>
