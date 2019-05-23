@@ -8,7 +8,10 @@
       "!<rootDir>/src/index.js"
     ]
   },
-  "version": "5.0.0",
+  "version": "5.0.1",
+  "author": "RICRO",
+  "description": "App template built with colostate-ricro-scripts/cru-create-app",
+  "homepage": "/apps",
   "dependencies": {
     "colostate-ricro-ui": "^3.4.1",
     "react": "^16.8.6",
@@ -33,9 +36,6 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "author": "RICRO",
-  "description": "App template built with colostate-ricro-scripts/cru-create-app",
-  "homepage": "/apps",
   "devDependencies": {
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-babel": "^5.3.0",
