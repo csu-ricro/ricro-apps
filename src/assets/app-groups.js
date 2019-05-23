@@ -60,7 +60,7 @@ export default [
         description: 'Manage users and app configurations',
         protected: true,
         icon: <IconAtom />,
-        link: '/nucleus/',
+        link: '/null/nucleus/',
       },
       {
         name: 'Email Signature Generator',
