@@ -13,7 +13,7 @@
   "description": "App template built with colostate-ricro-scripts/cru-create-app",
   "homepage": "/apps",
   "dependencies": {
-    "colostate-ricro-ui": "^3.5.4",
+    "colostate-ricro-ui": "^3.5.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8"
