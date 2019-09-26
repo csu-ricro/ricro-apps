@@ -35,7 +35,7 @@ export default [
         protected: true,
         description: 'Files related to BSL3 facilities and trianing',
         icon: <IconFolderOpen />,
-        link: `${appsDir}/bso/bsl3-files/`,
+        link: `${appsDir}/bso/bsl3-file-repository/`,
       },
     ],
   },
