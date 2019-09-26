@@ -33,7 +33,7 @@ export default [
       {
         name: 'BSL3 File Repository',
         protected: true,
-        description: 'Files related to BSL3 facilities and trianing',
+        description: 'Files related to BSL3 facilities and training',
         icon: <IconFolderOpen />,
         link: `${appsDir}/bso/bsl3-file-repository/`,
       },
