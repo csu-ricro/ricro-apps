@@ -11,7 +11,7 @@
   "version": "5.0.4",
   "author": "RICRO",
   "description": "App template built with colostate-ricro-scripts/cru-create-app",
-  "homepage": "/apps",
+  "homepage": "/apps/apps",
   "dependencies": {
     "colostate-ricro-ui": "^3.5.8",
     "react": "^16.8.6",
