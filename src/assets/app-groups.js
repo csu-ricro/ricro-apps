@@ -6,6 +6,7 @@ import IconSchool from 'mdi-material-ui/School';
 import IconSignatureFreehand from 'mdi-material-ui/SignatureFreehand';
 import React from 'react';
 
+const appsDir = '/apps';
 export default [
   {
     name: 'Responsible Conduct of Research',
@@ -15,13 +16,13 @@ export default [
         name: 'RCR Training',
         description: 'RCR online training and certification',
         icon: <IconSchool />,
-        link: '/rcr/training/',
+        link: `${appsDir}/rcr/training/`,
       },
       {
         name: 'RCR Repository',
         description: 'Resources related to various RCR topics',
         icon: <IconBook />,
-        link: '/rcr/repository/',
+        link: `${appsDir}/rcr/repository/`,
       },
     ],
   },
@@ -34,7 +35,7 @@ export default [
         protected: true,
         description: 'Files related to BSL3 facilities and trianing',
         icon: <IconFolderOpen />,
-        link: '/bso/bsl3-files/',
+        link: `${appsDir}/bso/bsl3-files/`,
       },
     ],
   },
@@ -47,7 +48,7 @@ export default [
         protected: 'true',
         description: 'Request the status of a research protocol',
         icon: <IconForum />,
-        link: '/protocol-status/',
+        link: `${appsDir}/osp/protocol-status/`,
       },
     ],
   },
@@ -60,14 +61,14 @@ export default [
         description: 'Manage users and app configurations',
         protected: true,
         icon: <IconAtom />,
-        link: '/null/nucleus/',
+        link: `${appsDir}/internal/nucleus/`,
       },
       {
         name: 'Email Signature Generator',
         description: 'Create a custom CSU branded email signature',
         protected: true,
         icon: <IconSignatureFreehand />,
-        link: '/internal/email-signature-generator/',
+        link: `${appsDir}/internal/email-signature-generator/`,
       },
     ],
   },
